@@ -2,7 +2,7 @@ const express = require('express');
 const { type } = require('os');
 const app  = express();
 
-app.use(express.json())
+app.use(express.text())
 
 
 app.get('/',(req,res) => {
@@ -10,7 +10,7 @@ app.get('/',(req,res) => {
 });
 
 app.post('/',(req,res) =>{
-    console.log(req.body.name)
+    console.log(req.body)
     res.send('this is body with home page');
 });
 
